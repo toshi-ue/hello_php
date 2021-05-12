@@ -20,11 +20,15 @@
   <main>
     <h2>Practice</h2>
     <pre>
-<!-- ここにプログラムを記述します -->
-<?php
-print('PHPを勉強中');
-print('aaa');
-?>
+    <!-- ここにプログラムを記述します -->
+    <?php
+    // print構文(syntax)
+    // [PHP+MySQL（MariaDB） Webサーバーサイドプログラミング入門 | Udemy](https://www.udemy.com/course/php7basic/learn/lecture/10401552#content)
+    print("PHPを勉強中\n");
+    print("aaa\n");
+    // escape sequence
+    print("I'm studying \"PHP\"\n")
+    ?>
 </pre>
   </main>
 </body>
