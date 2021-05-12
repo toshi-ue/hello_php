@@ -1,0 +1,7 @@
+// [チームで推奨するVSCode拡張機能を共有するtips | フューチャー技術ブログ](https://future-architect.github.io/articles/20200828/)
+{
+  "recommendations": [
+    "bmewburn.vscode-intelephense-client",
+    "felixfbecker.php-intellisense"
+  ]
+}

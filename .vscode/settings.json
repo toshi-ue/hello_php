@@ -1,0 +1,11 @@
+{
+  // [テーマカラー| Visual Studio Code Extension API](https://code.visualstudio.com/api/references/theme-color#menu-bar-colors)
+  "workbench.colorCustomizations": {
+    "activityBar.background": "#7377AD",
+    "focusBorder": "#7377AD",
+    "tab.activeBackground": "#7377AD",
+    "titleBar.activeBackground": "#7377AD",
+    // "activityBarBadge.background": "#7377AD"
+  },
+  "workbench.colorTheme": "1984 - Light",
+}
