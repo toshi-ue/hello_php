@@ -24,10 +24,38 @@
     <?php
     // print構文(syntax)
     // [PHP+MySQL（MariaDB） Webサーバーサイドプログラミング入門 | Udemy](https://www.udemy.com/course/php7basic/learn/lecture/10401552#content)
-    print("PHPを勉強中\n");
-    print("aaa\n");
+    print("print構文");
+    print("\n");
+    print("PHPを勉強中");
+    print("\n");
+    print("aaa");
+    print("\n");
+
     // escape sequence
-    print("I'm studying \"PHP\"\n")
+    print("I'm studying \"PHP\"");
+    print("\n");
+    print("\n");
+    print("\n");
+
+
+
+    // 算術演算子
+    // [PHP+MySQL（MariaDB） Webサーバーサイドプログラミング入門 | Udemy](https://www.udemy.com/course/php7basic/learn/lecture/10429972#content)
+    print("算術演算子\n");
+    print(1 + 1);
+    print("\n");
+    print(123 + 2 * 5);
+    print("\n");
+    print(123 + 2 * 5 / 3);
+    print("\n");
+    print("\n");
+    print("\n");
+
+
+
+
+
+
     ?>
 </pre>
   </main>
