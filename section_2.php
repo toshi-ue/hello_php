@@ -123,30 +123,46 @@
 // print("\n");
 // print("\n");
 
-// カレンダーを表示(timeファンクション、date  )
-print(time()); // 今日のtimestampを取得
-print("\n");
-print(date('n/j(D)')); // e.g. 5/13(Thu)
-print("\n");
-print(time() + 60 * 60 * 24); // 明日のtimestampを取得
-print("\n");
-print(date('n/j(D)', strtotime('+1day'))); // e.g. 5/14(Fri)
-print("\n");
-// for ($i = 1; $i <= 365; $i++) {
+// // カレンダーを表示(timeファンクション、date  )
+// print(time()); // 今日のtimestampを取得
+// print("\n");
+// print(date('n/j(D)')); // e.g. 5/13(Thu)
+// print("\n");
+// print(time() + 60 * 60 * 24); // 明日のtimestampを取得
+// print("\n");
+// print(date('n/j(D)', strtotime('+1day'))); // e.g. 5/14(Fri)
+// print("\n");
+// // for ($i = 1; $i <= 365; $i++) {
+// //   $date = strtotime('+' . $i . 'day');
+// //   print(date('n/j(D)', $date));
+// //   print("\n");
+// // }
+// for ($i = 1; $i <= 365; $i++) :
 //   $date = strtotime('+' . $i . 'day');
 //   print(date('n/j(D)', $date));
 //   print("\n");
-// }
-for ($i = 1; $i <= 365; $i++) :
+// endfor;
+// print("\n");
+// print("\n");
+// print("\n");
+
+
+
+// カレンダーを表示(日本語)
+$week_name = ['日', '月', '火', '水', '木', '金', '土'];
+print($week_name[date('w')]); //dateファンクションのwフォーマットを使用(date('w')には数字が入る)
+print("\n");
+
+for ($i = 0; $i < 365; $i++) :
   $date = strtotime('+' . $i . 'day');
-  print(date('n/j(D)', $date));
+  // $w = $date->format('w');
+  // print(date('n/j(D)', $date));
+  print(date('n/j', $date) . "(" . $week_name[date('w', $date)] . ")");
   print("\n");
 endfor;
 print("\n");
 print("\n");
 print("\n");
-
-
 ?>
 </pre>
   </main>
