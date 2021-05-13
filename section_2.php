@@ -148,21 +148,39 @@
 
 
 
-// カレンダーを表示(日本語)
-$week_name = ['日', '月', '火', '水', '木', '金', '土'];
-print($week_name[date('w')]); //dateファンクションのwフォーマットを使用(date('w')には数字が入る)
+// // カレンダーを表示(日本語)
+// $week_name = ['日', '月', '火', '水', '木', '金', '土'];
+// print($week_name[date('w')]); //dateファンクションのwフォーマットを使用(date('w')には数字が入る)
+// print("\n");
+
+// for ($i = 0; $i < 365; $i++) :
+//   $date = strtotime('+' . $i . 'day');
+//   // $w = $date->format('w');
+//   // print(date('n/j(D)', $date));
+//   print(date('n/j', $date) . "(" . $week_name[date('w', $date)] . ")");
+//   print("\n");
+// endfor;
+// print("\n");
+// print("\n");
+// print("\n");
+
+
+// 連想配列(foreach構文)
+$fruits = [
+  'apple' => "りんご",
+  'grape' => "ぶどう",
+  'lemon' => "レモン",
+  'tomato' => "トマト",
+  'peach' => "もも"
+];
+
+print($fruits['apple']); // りんご
 print("\n");
 
-for ($i = 0; $i < 365; $i++) :
-  $date = strtotime('+' . $i . 'day');
-  // $w = $date->format('w');
-  // print(date('n/j(D)', $date));
-  print(date('n/j', $date) . "(" . $week_name[date('w', $date)] . ")");
-  print("\n");
-endfor;
-print("\n");
-print("\n");
-print("\n");
+foreach ($fruits as $english => $japanese) {
+  print($english . ':' . $japanese . "\n");
+}
+
 ?>
 </pre>
   </main>
