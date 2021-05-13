@@ -79,6 +79,28 @@
     // 現在時刻を表示(オブジェクト指向)
     $today = new DateTime();
     print($today->format('G時 i分 s秒'));
+    print("\n");
+    print("\n");
+    print("\n");
+
+
+
+    // 変数
+    print(100 + 200);
+    print("\n");
+    print(100 + 200 * 1.08);
+    print("\n");
+    print((100 + 200) * 1.08);
+    print("\n");
+    //    変数を使えば使い回しがラクちん♪♪
+    $sum = 100 + 200;
+    $tax = 1.08;
+    print("totalPrice" . $sum . "yen");
+    print("\n");
+    print("totalPrice with Tax" . $sum * $tax . "yen");
+    print("\n");
+    print("\n");
+    print("\n");
     ?>
 </pre>
   </main>
