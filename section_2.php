@@ -53,8 +53,18 @@
 
 
 
-
-
+    // 現在の時刻を表示
+    // [PHP+MySQL（MariaDB） Webサーバーサイドプログラミング入門 | Udemy](https://www.udemy.com/course/php7basic/learn/lecture/11653566#content)
+    // [PHP: DateTime::format - Manual](https://www.php.net/manual/ja/datetime.format.php)
+    print("現在の時刻を表示");
+    print("\n");
+    // 秒を表示
+    print(date('s秒'));
+    print("\n");
+    // 曜日を表示、dateファンクション(英語)
+    print(date('l'));
+    print("\n");
+    print("\n");
 
     ?>
 </pre>
