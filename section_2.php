@@ -65,7 +65,14 @@
     print(date('l'));
     print("\n");
     print("\n");
+    print("\n");
 
+
+    // 現在時刻を表示(文字列の連結)
+    print('現在は' . date('G時 i分 s秒') . 'です');
+    print("\n");
+    print("\n");
+    print("\n");
     ?>
 </pre>
   </main>
