@@ -165,20 +165,62 @@
 // print("\n");
 
 
-// 連想配列(foreach構文)
-$fruits = [
-  'apple' => "りんご",
-  'grape' => "ぶどう",
-  'lemon' => "レモン",
-  'tomato' => "トマト",
-  'peach' => "もも"
-];
+// // 連想配列(foreach構文)
+// $fruits = [
+//   'apple' => "りんご",
+//   'grape' => "ぶどう",
+//   'lemon' => "レモン",
+//   'tomato' => "トマト",
+//   'peach' => "もも"
+// ];
 
-print($fruits['apple']); // りんご
+// print($fruits['apple']); // りんご
+// print("\n");
+
+// foreach ($fruits as $english => $japanese) {
+//   print($english . ':' . $japanese . "\n");
+// }
+
+
+
+// if構文
+
+
+$hour = date('G');
+print($hour); // 現在の"時"を表示
 print("\n");
 
-foreach ($fruits as $english => $japanese) {
-  print($english . ':' . $japanese . "\n");
+
+if ($hour < 9) {
+  print('※ 現在受付時間外です');
+  print("\n");
+} else {
+  print('ようこそ');
+  print("\n");
+}
+
+$x = 'あいうえお';
+if ($x == '') {
+  print('xには文字が入っています');
+  print("\n");
+}
+
+// 上の書き方と同じ結果になる
+if ($x) {
+  print('xには文字が入っています');
+  print("\n");
+}
+
+$x = 1;
+if ($x) {
+  print('xは0以外です');
+  print("\n");
+}
+
+$x = 0;
+if (!$x) {
+  print('xは0です');
+  print("\n");
 }
 
 ?>
