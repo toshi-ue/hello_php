@@ -104,21 +104,44 @@
 
 
 
-// for, while
-// for構文
-for ($i = 1; $i <= 5; $i++) {
-  print($i . "\n");
-}
+// // for, while
+// // for構文
+// for ($i = 1; $i <= 5; $i++) {
+//   print($i . "\n");
+// }
 
 
-// while構文
-$i = 1;
-while ($i <= 5) {
-  print($i . "\n");
-  // $i = $i + 1;
-  // $i += 1;
-  $i++;
-}
+// // while構文
+// $i = 1;
+// while ($i <= 5) {
+//   print($i . "\n");
+//   // $i = $i + 1;
+//   // $i += 1;
+//   $i++;
+// }
+// print("\n");
+// print("\n");
+// print("\n");
+
+// カレンダーを表示(timeファンクション、date  )
+print(time()); // 今日のtimestampを取得
+print("\n");
+print(date('n/j(D)')); // e.g. 5/13(Thu)
+print("\n");
+print(time() + 60 * 60 * 24); // 明日のtimestampを取得
+print("\n");
+print(date('n/j(D)', strtotime('+1day'))); // e.g. 5/14(Fri)
+print("\n");
+// for ($i = 1; $i <= 365; $i++) {
+//   $date = strtotime('+' . $i . 'day');
+//   print(date('n/j(D)', $date));
+//   print("\n");
+// }
+for ($i = 1; $i <= 365; $i++) :
+  $date = strtotime('+' . $i . 'day');
+  print(date('n/j(D)', $date));
+  print("\n");
+endfor;
 print("\n");
 print("\n");
 print("\n");
