@@ -276,13 +276,38 @@
 
 
 
-// file_put_contents(ファイルに内容を書き込む)
-$success = file_put_contents('../my_datas/sample.txt', '2018-06-01 ホームページをリニューアルしました');
-if ($success) {
-  print('ファイルへの書き込みが完了しました');
-} else {
-  print('書き込みに失敗しました。フォルダ権限などを確認してください');
-}
+// // file_put_contents(ファイルに内容を書き込む)
+// $success = file_put_contents('../my_datas/sample.txt', '2018-06-01 ホームページをリニューアルしました');
+// if ($success) {
+//   print('ファイルへの書き込みが完了しました');
+// } else {
+//   print('書き込みに失敗しました。フォルダ権限などを確認してください');
+// }
+
+
+
+// file_get_contents(ファイルの読み込み)、追加書き込み
+$contents = file_get_contents('../my_datas/sample.txt');
+print($contents); // 2018-06-01 ホームページをリニューアルしました
+print("\n");
+print("\n");
+
+readfile('../my_datas/sample.txt'); // 2018-06-01 ホームページをリニューアルしました
+print("\n");
+print("\n");
+
+$contents .= "2018-06-02 商品を追加しました";
+file_put_contents('../my_datas/sample.txt', $contents);
+print($contents);
+print("\n");
+print("\n");
+
+$contents = "2018-05-12 ホームページを作成しました\n" . $contents;
+file_put_contents('../my_datas/sample.txt', $contents);
+print($contents);
+print("\n");
+print("\n");
+
 ?>
 </pre>
   </main>
