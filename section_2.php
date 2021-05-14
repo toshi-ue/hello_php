@@ -183,45 +183,78 @@
 
 
 
-// if構文
+// // if構文
 
 
-$hour = date('G');
-print($hour); // 現在の"時"を表示
+// $hour = date('G');
+// print($hour); // 現在の"時"を表示
+// print("\n");
+
+
+// if ($hour < 9) {
+//   print('※ 現在受付時間外です');
+//   print("\n");
+// } else {
+//   print('ようこそ');
+//   print("\n");
+// }
+
+// $x = 'あいうえお';
+// if ($x == '') {
+//   print('xには文字が入っています');
+//   print("\n");
+// }
+
+// // 上の書き方と同じ結果になる
+// if ($x) {
+//   print('xには文字が入っています');
+//   print("\n");
+// }
+
+// $x = 1;
+// if ($x) {
+//   print('xは0以外です');
+//   print("\n");
+// }
+
+// $x = 0;
+// if (!$x) {
+//   print('xは0です');
+//   print("\n");
+// }
+
+
+
+// 整数、小数点の操作(ceil, floor, round)
+
+// ファンクション不使用
+$numerical_value = "○";
+print("3000円のものから100円値引きした場合は" . $numerical_value . "%引きです。");
+print("\n");
 print("\n");
 
+$numerical_value = 100 / 3000 * 100; // 3.3333333333333
+print("3000円のものから100円値引きした場合は" . $numerical_value . "%引きです。");
+print("\n");
+print("\n");
 
-if ($hour < 9) {
-  print('※ 現在受付時間外です');
-  print("\n");
-} else {
-  print('ようこそ');
-  print("\n");
-}
+// floorファンクション使用(切り捨て)
+$numerical_value = floor(100 / 3000 * 100); // 3
+print("3000円のものから100円値引きした場合は" . $numerical_value . "%引きです。");
+print("\n");
+print("\n");
 
-$x = 'あいうえお';
-if ($x == '') {
-  print('xには文字が入っています');
-  print("\n");
-}
+// ceilファンクション使用(切り上げ)
+$numerical_value = ceil(100 / 3000 * 100); // 4
+print("3000円のものから100円値引きした場合は" . $numerical_value . "%引きです。");
+print("\n");
+print("\n");
 
-// 上の書き方と同じ結果になる
-if ($x) {
-  print('xには文字が入っています');
-  print("\n");
-}
-
-$x = 1;
-if ($x) {
-  print('xは0以外です');
-  print("\n");
-}
-
-$x = 0;
-if (!$x) {
-  print('xは0です');
-  print("\n");
-}
+// roundファンクション使用(四捨五入)
+$numerical_value = round(100 / 3000 * 100, 1); // 3.3
+print("3000円のものから100円値引きした場合は" . $numerical_value . "%引きです。");
+print("\n");
+print("\n");
 
 ?>
 </pre>
