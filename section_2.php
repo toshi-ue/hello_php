@@ -258,24 +258,31 @@
 
 
 
-// sprintf構文(桁数、書式を整える)
-$date = sprintf('%04d年 %02d月 %02d日', 2018, 1, 12); // 2018年 01月 12日
-print($date);
-print("\n");
-print("\n");
+// // c
+// $date = sprintf('%04d年 %02d月 %02d日', 2018, 1, 12); // 2018年 01月 12日
+// print($date);
+// print("\n");
+// print("\n");
 
-$date = sprintf('%04d年 % 2d月 % 2d日', 2018, 1, 12); // 2018年  1月 12日
-print($date);
-print("\n");
-print("\n");
+// $date = sprintf('%04d年 % 2d月 % 2d日', 2018, 1, 12); // 2018年  1月 12日
+// print($date);
+// print("\n");
+// print("\n");
 
-$date = sprintf('%04d年 % 2d月 % 2d日 %s', 2018, 1, 12, '金'); // 2018年  1月 12日 金
-print($date);
-print("\n");
-print("\n");
+// $date = sprintf('%04d年 % 2d月 % 2d日 %s', 2018, 1, 12, '金'); // 2018年  1月 12日 金
+// print($date);
+// print("\n");
+// print("\n");
 
 
 
+// file_put_contents(ファイルに内容を書き込む)
+$success = file_put_contents('../my_datas/sample.txt', '2018-06-01 ホームページをリニューアルしました');
+if ($success) {
+  print('ファイルへの書き込みが完了しました');
+} else {
+  print('書き込みに失敗しました。フォルダ権限などを確認してください');
+}
 ?>
 </pre>
   </main>
