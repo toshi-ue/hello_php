@@ -286,27 +286,42 @@
 
 
 
-// file_get_contents(ファイルの読み込み)、追加書き込み
-$contents = file_get_contents('../my_datas/sample.txt');
-print($contents); // 2018-06-01 ホームページをリニューアルしました
+// // file_get_contents(ファイルの読み込み)、追加書き込み
+// $contents = file_get_contents('../my_datas/sample.txt');
+// print($contents); // 2018-06-01 ホームページをリニューアルしました
+// print("\n");
+// print("\n");
+
+// readfile('../my_datas/sample.txt'); // 2018-06-01 ホームページをリニューアルしました
+// print("\n");
+// print("\n");
+
+// $contents .= "2018-06-02 商品を追加しました";
+// file_put_contents('../my_datas/sample.txt', $contents);
+// print($contents);
+// print("\n");
+// print("\n");
+
+// $contents = "2018-05-12 ホームページを作成しました\n" . $contents;
+// file_put_contents('../my_datas/sample.txt', $contents);
+// print($contents);
+// print("\n");
+// print("\n");
+
+
+
+// simplexml_load_fileファンクション(xmlの情報を読み込む), var_dumpファンクション
+print("displayed by simplexml_load_file\n");
+$xmlTree = simplexml_load_file('https://h2o-space.com/feed/');
+foreach ($xmlTree->channel->item as $item) :
+  print("<a href=" . $item->link . ">" . $item->title . "</a>\n");
+endforeach;
 print("\n");
 print("\n");
 
-readfile('../my_datas/sample.txt'); // 2018-06-01 ホームページをリニューアルしました
-print("\n");
-print("\n");
-
-$contents .= "2018-06-02 商品を追加しました";
-file_put_contents('../my_datas/sample.txt', $contents);
-print($contents);
-print("\n");
-print("\n");
-
-$contents = "2018-05-12 ホームページを作成しました\n" . $contents;
-file_put_contents('../my_datas/sample.txt', $contents);
-print($contents);
-print("\n");
-print("\n");
+// var_dump
+print("displayed by var_dump\n");
+var_dump($xmlTree);
 
 ?>
 </pre>
