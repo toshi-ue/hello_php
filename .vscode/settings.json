@@ -8,4 +8,6 @@
     // "activityBarBadge.background": "#7377AD"
   },
   "workbench.colorTheme": "1984 - Light",
+  "php.suggest.basic": false,
+  "php.validate.enable": false,
 }
