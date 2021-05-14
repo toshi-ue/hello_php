@@ -310,18 +310,32 @@
 
 
 
-// simplexml_load_fileファンクション(xmlの情報を読み込む), var_dumpファンクション
-print("displayed by simplexml_load_file\n");
-$xmlTree = simplexml_load_file('https://h2o-space.com/feed/');
-foreach ($xmlTree->channel->item as $item) :
+// // simplexml_load_fileファンクション(xmlの情報を読み込む), var_dumpファンクション
+// print("displayed by simplexml_load_file\n");
+// $xmlTree = simplexml_load_file('https://h2o-space.com/feed/');
+// foreach ($xmlTree->channel->item as $item) :
+//   print("<a href=" . $item->link . ">" . $item->title . "</a>\n");
+// endforeach;
+// print("\n");
+// print("\n");
+
+// // var_dump
+// print("displayed by var_dump\n");
+// var_dump($xmlTree);
+
+
+
+// json_decodeファンクション(JSONの読み込み)
+print("displayed by json_decode\n");
+$file = file_get_contents('https://h2o-space.com/feed/json/'); // urlのファイルを読み込み。読み込むファイル(url)はなんでも良い, 例として作者のrssを読み込む
+$json = json_decode($file); // jsonデータを読み込んで、phpの変数に変換
+var_dump($json); // 取得したjsonデータを表示
+// 取得した情報をforeachで表示する
+foreach ($json->items as $item) :
   print("<a href=" . $item->link . ">" . $item->title . "</a>\n");
 endforeach;
 print("\n");
 print("\n");
-
-// var_dump
-print("displayed by var_dump\n");
-var_dump($xmlTree);
 
 ?>
 </pre>
