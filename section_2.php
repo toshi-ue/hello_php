@@ -325,17 +325,21 @@
 
 
 
-// json_decodeファンクション(JSONの読み込み)
-print("displayed by json_decode\n");
-$file = file_get_contents('https://h2o-space.com/feed/json/'); // urlのファイルを読み込み。読み込むファイル(url)はなんでも良い, 例として作者のrssを読み込む
-$json = json_decode($file); // jsonデータを読み込んで、phpの変数に変換
-var_dump($json); // 取得したjsonデータを表示
-// 取得した情報をforeachで表示する
-foreach ($json->items as $item) :
-  print("<a href=" . $item->link . ">" . $item->title . "</a>\n");
-endforeach;
-print("\n");
-print("\n");
+// // json_decodeファンクション(JSONの読み込み)
+// print("displayed by json_decode\n");
+// $file = file_get_contents('https://h2o-space.com/feed/json/'); // urlのファイルを読み込み。読み込むファイル(url)はなんでも良い, 例として作者のrssを読み込む
+// $json = json_decode($file); // jsonデータを読み込んで、phpの変数に変換
+// var_dump($json); // 取得したjsonデータを表示
+// // 取得した情報をforeachで表示する
+// foreach ($json->items as $item) :
+//   print("<a href=" . $item->link . ">" . $item->title . "</a>\n");
+// endforeach;
+// print("\n");
+// print("\n");
+
+
+
+// [PHP+MySQL（MariaDB） Webサーバーサイドプログラミング入門 | Udemy](https://www.udemy.com/course/php7basic/learn/lecture/10853672#overview)
 
 ?>
 </pre>
