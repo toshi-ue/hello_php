@@ -225,36 +225,56 @@
 
 
 
-// 整数、小数点の操作(ceil, floor, round)
+// // 整数、小数点の操作(ceil, floor, round)
 
-// ファンクション不使用
-$numerical_value = "○";
-print("3000円のものから100円値引きした場合は" . $numerical_value . "%引きです。");
+// // ファンクション不使用
+// $numerical_value = "○";
+// print("3000円のものから100円値引きした場合は" . $numerical_value . "%引きです。");
+// print("\n");
+// print("\n");
+
+// $numerical_value = 100 / 3000 * 100; // 3.3333333333333
+// print("3000円のものから100円値引きした場合は" . $numerical_value . "%引きです。");
+// print("\n");
+// print("\n");
+
+// // floorファンクション使用(切り捨て)
+// $numerical_value = floor(100 / 3000 * 100); // 3
+// print("3000円のものから100円値引きした場合は" . $numerical_value . "%引きです。");
+// print("\n");
+// print("\n");
+
+// // ceilファンクション使用(切り上げ)
+// $numerical_value = ceil(100 / 3000 * 100); // 4
+// print("3000円のものから100円値引きした場合は" . $numerical_value . "%引きです。");
+// print("\n");
+// print("\n");
+
+// // roundファンクション使用(四捨五入)
+// $numerical_value = round(100 / 3000 * 100, 1); // 3.3
+// print("3000円のものから100円値引きした場合は" . $numerical_value . "%引きです。");
+// print("\n");
+// print("\n");
+
+
+
+// sprintf構文(桁数、書式を整える)
+$date = sprintf('%04d年 %02d月 %02d日', 2018, 1, 12); // 2018年 01月 12日
+print($date);
 print("\n");
 print("\n");
 
-$numerical_value = 100 / 3000 * 100; // 3.3333333333333
-print("3000円のものから100円値引きした場合は" . $numerical_value . "%引きです。");
+$date = sprintf('%04d年 % 2d月 % 2d日', 2018, 1, 12); // 2018年  1月 12日
+print($date);
 print("\n");
 print("\n");
 
-// floorファンクション使用(切り捨て)
-$numerical_value = floor(100 / 3000 * 100); // 3
-print("3000円のものから100円値引きした場合は" . $numerical_value . "%引きです。");
+$date = sprintf('%04d年 % 2d月 % 2d日 %s', 2018, 1, 12, '金'); // 2018年  1月 12日 金
+print($date);
 print("\n");
 print("\n");
 
-// ceilファンクション使用(切り上げ)
-$numerical_value = ceil(100 / 3000 * 100); // 4
-print("3000円のものから100円値引きした場合は" . $numerical_value . "%引きです。");
-print("\n");
-print("\n");
 
-// roundファンクション使用(四捨五入)
-$numerical_value = round(100 / 3000 * 100, 1); // 3.3
-print("3000円のものから100円値引きした場合は" . $numerical_value . "%引きです。");
-print("\n");
-print("\n");
 
 ?>
 </pre>
